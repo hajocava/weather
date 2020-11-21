@@ -13,6 +13,9 @@
 		41BC581125698F970064A49B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41BC580F25698F970064A49B /* Main.storyboard */; };
 		41BC581325698F970064A49B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41BC581225698F970064A49B /* Assets.xcassets */; };
 		41BC581625698F970064A49B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41BC581425698F970064A49B /* LaunchScreen.storyboard */; };
+		41BC581F2569A3070064A49B /* ClimaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BC581E2569A3070064A49B /* ClimaManager.swift */; };
+		41BC58222569AD360064A49B /* ClimaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BC58212569AD360064A49B /* ClimaData.swift */; };
+		41BC58252569B98C0064A49B /* ClimaModelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BC58242569B98C0064A49B /* ClimaModelo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		41BC581225698F970064A49B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41BC581525698F970064A49B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41BC581725698F970064A49B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41BC581E2569A3070064A49B /* ClimaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimaManager.swift; sourceTree = "<group>"; };
+		41BC58212569AD360064A49B /* ClimaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimaData.swift; sourceTree = "<group>"; };
+		41BC58242569B98C0064A49B /* ClimaModelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimaModelo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				41BC581225698F970064A49B /* Assets.xcassets */,
 				41BC581425698F970064A49B /* LaunchScreen.storyboard */,
 				41BC581725698F970064A49B /* Info.plist */,
+				41BC581E2569A3070064A49B /* ClimaManager.swift */,
+				41BC58212569AD360064A49B /* ClimaData.swift */,
+				41BC58242569B98C0064A49B /* ClimaModelo.swift */,
 			);
 			path = Clima;
 			sourceTree = "<group>";
@@ -137,9 +146,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41BC58252569B98C0064A49B /* ClimaModelo.swift in Sources */,
 				41BC580E25698F970064A49B /* ViewController.swift in Sources */,
 				41BC580A25698F970064A49B /* AppDelegate.swift in Sources */,
+				41BC581F2569A3070064A49B /* ClimaManager.swift in Sources */,
 				41BC580C25698F970064A49B /* SceneDelegate.swift in Sources */,
+				41BC58222569AD360064A49B /* ClimaData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
