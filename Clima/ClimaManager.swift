@@ -19,8 +19,11 @@ struct ClimaManager {
     
     func fetchClima(nombreCiudad: String) {
         let urlString = "\(climaURL)&q=\(nombreCiudad)"
-        print(urlString)
-        
+        realizarSolicitud(urlString: urlString)
+    }
+    
+    func fechtClima(lat: Double, lon: Double) {
+        let urlString = "\(climaURL)&lat=\(lat)&lon=\(lon)"
         realizarSolicitud(urlString: urlString)
     }
     
@@ -53,18 +56,24 @@ struct ClimaManager {
     
     func parseJSON(climaData: Data) -> ClimaModelo? {
         let decoder = JSONDecoder()
+        
         do {
-            // Aqui ya accedemos a la informacion de nuestor objeto JSON
+            // Aqui ya accedemos a la informacion de nuestro objeto JSON
             let dataDecodificada = try decoder.decode(ClimaData.self, from: climaData)
             
             let id = dataDecodificada.weather[0].id
             let nombre = dataDecodificada.name
             let descripcion = dataDecodificada.weather[0].description
             let temperatura = dataDecodificada.main.temp
+            let tempMax = dataDecodificada.main.temp_max
+            let tempMin = dataDecodificada.main.temp_min
+            let viento = dataDecodificada.wind.speed
+            let humedad = dataDecodificada.main.humidity
             
-            let objClima = ClimaModelo(conditionID: id, nombreCiudad: nombre, descripcionClima: descripcion, temperaturaCelcius: temperatura)
+            let objClima = ClimaModelo(conditionID: id, nombreCiudad: nombre, descripcionClima: descripcion, temperaturaCelcius: temperatura, temperaturaMaxima: tempMax, temperaturaMinima: tempMin, viento: viento, humedad: humedad)
             
             return objClima
+            
         } catch {
             print(error)
             return nil
